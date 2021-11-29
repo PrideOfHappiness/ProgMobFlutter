@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/pertemuan1.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutterdemo/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,11 +50,11 @@ class _MyHomePageState extends State<MyHomePage> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => const Pertemuan1(title: "Hello!")),
+            builder: (context) => const Dashboard(title: "Dashboard!")),
       );
     }
   }
-
+@override
   void initState(){
     navigateLogin();
   }

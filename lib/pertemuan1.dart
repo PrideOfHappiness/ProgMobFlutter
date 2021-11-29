@@ -14,6 +14,12 @@ import 'package:shared_preferences/shared_preferences.dart';
   class _Pertemuan1State extends State<Pertemuan1> {
     final _formkey = GlobalKey<FormState>();
 
+    @override
+    void initState(){
+      super.initState();
+    }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
