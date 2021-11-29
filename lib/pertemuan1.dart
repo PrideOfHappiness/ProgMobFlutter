@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -46,8 +47,8 @@ import 'package:shared_preferences/shared_preferences.dart';
             ),
             TextFormField(
               decoration: InputDecoration(
-                labelText: "Tes Input 2",
-                hintText: "Teks yang akan diinput disini",
+                labelText: "Password",
+                hintText: "Password",
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5),
                 )
@@ -71,11 +72,11 @@ import 'package:shared_preferences/shared_preferences.dart';
               color: Colors.blueGrey,
                onPressed: () async{
                  SharedPreferences prefs = await SharedPreferences.getInstance();
-                 await prefs.setInt("is_login", 1);
+                 await prefs.setInt("is_login", 0);
                  Navigator.pushReplacement(
                      context,
                      MaterialPageRoute(
-                     builder: (context) => const Pertemuan1(title: "Hello!")),
+                     builder: (context) => const MyHomePage(title: "Keluar")),
                  );
                 },
                 child: const Text(
